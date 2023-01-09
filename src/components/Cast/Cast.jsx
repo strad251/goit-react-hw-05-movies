@@ -8,8 +8,8 @@ export const Cast = () => {
   console.log(movieId)
   useEffect(() => {
     if (!movieId) return;
-    getCastById(movieId).then(cast => {
-      setCast(cast);
+    getCastById(movieId).then(data => {
+      setCast(data.cast);
     });
   }, [movieId]);
   if (!cast) {
@@ -23,7 +23,7 @@ export const Cast = () => {
             <li key={id}>
               <div >
                 <img
-                  src={profile_path}
+                  src={`https://image.tmdb.org/t/p/w500${profile_path}`}
                   alt={original_name}                  
                 />
               </div>

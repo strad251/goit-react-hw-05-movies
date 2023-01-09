@@ -4,14 +4,14 @@ import { getReviewsById } from "services/moviesApi";
 export const Reviews = () => {
 
   const [reviews, setReviews] = useState([]);
-  const { id } = useParams();
+  const { movieId } = useParams();
 
   useEffect(() => {
-    if (!id) return;
-    getReviewsById(id).then(review => {
-      setReviews(review);
+    if (!movieId) return;
+    getReviewsById(movieId).then(({ results }) => {
+      setReviews(results);
     });
-  }, [id]);
+  }, [movieId]);
   if (!reviews) {
     return;
   }

@@ -15,6 +15,7 @@ export const Header = () => {
         </ul>
       </nav>
       </header>
+
       <Outlet/>
     </>
   )
