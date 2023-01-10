@@ -1,5 +1,7 @@
+import { Cast } from "components/Cast/Cast";
+import { Reviews } from "components/Reviews/Reviews";
 import { useState, useEffect } from "react";
-import { useParams, Link, Outlet } from "react-router-dom";
+import { useParams, Link, Route, Routes } from "react-router-dom";
 import { getMovieById } from "services/moviesApi";
 
 export const MovieDetails = () => {
@@ -27,7 +29,11 @@ export const MovieDetails = () => {
             <p>Additional information</p>
           <Link to="reviews" >Reviews</Link><br/>
           <Link to="cast" >Cast</Link>
-          <Outlet/>
+          
+          <Routes>
+            <Route path="cast" element={<Cast />} />
+           <Route path="reviews" element={<Reviews />} />
+          </Routes>
         </div>
         </>
     )

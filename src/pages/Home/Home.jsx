@@ -1,21 +1,10 @@
-import { useEffect, useState } from 'react';
-import { getTrendingMovies } from 'services/moviesApi';
-import { MoviesList } from 'components/MoviesList/MoviesList';
+import { TrendingMovies } from "components/TrendingMovies/TrendingMovies"
+import { Route, Routes } from "react-router-dom"
 
-
-export const TrendingMovies = () => {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    getTrendingMovies().then(({ results }) => {
-      setMovies(results);
-    });
-  }, []);
-
+export const Home = () => {
   return (
-    <>
-    <h1>Trending Today</h1>
-      <MoviesList movies={movies} />
-      </>
-  );
-};
+      <Routes>
+        <Route path="/" element={<TrendingMovies />} />
+      </Routes>
+  )
+}
