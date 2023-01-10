@@ -1,0 +1,12 @@
+.movie_li {
+  font-size: 14px;
+  transition: all 300ms;
+}
+.movie_li:hover {
+  font-size: 18px;
+}
+
+.movie_link {
+  text-decoration: none;
+  color: black;
+}

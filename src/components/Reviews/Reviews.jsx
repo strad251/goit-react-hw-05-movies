@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getReviewsById } from "services/moviesApi";
-export const Reviews = () => {
+
+
+function Reviews() {
 
   const [reviews, setReviews] = useState([]);
   const { movieId } = useParams();
@@ -25,21 +27,18 @@ const isReviews = !!reviews.length;
             return (
               <li key={review.id}>
                 <p>
-                  Author:
-                  <span >{review.author}</span>
+                  <strong>Author: {review.author}</strong>
                 </p>
-
-                <div >
-                  <p >Content:</p>
-                  <span>{review.content}</span>
-                </div>
+                  <p>{review.content}</p>
               </li>
             );
           })}
         </ul>
       ) : (
-        <p >Oops!There are no such reviews!</p>
+        <p >We do not have any reviews for this movie...</p>
       )}
     </>
   );
 }
+
+export default Reviews;

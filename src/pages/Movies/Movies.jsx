@@ -1,7 +1,9 @@
 import { SearchMovies } from "components/SearchMovies/SearchMovies"
 
-export const Movies = () => {
+function Movies () {
   return (   
     <SearchMovies />
   )
 }
+
+export default Movies;

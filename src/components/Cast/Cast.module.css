@@ -1,0 +1,14 @@
+.cast_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cast_img {
+  width: 200px;
+}
+
+.cast_text {
+  font-size: 18px;
+  font-weight: 500;
+}

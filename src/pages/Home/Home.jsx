@@ -1,11 +1,17 @@
-import { TrendingMovies } from "components/TrendingMovies/TrendingMovies"
+import { Loader } from "components/Loader/Loader";
+import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom"
 
+const TrendingMovies = lazy(() => import('components/TrendingMovies/TrendingMovies'));
 
-export const Home = () => {
+function Home() {
   return (
+      <Suspense fallback={<Loader/>}>
         <Routes>
         <Route path="/" element={<TrendingMovies />} />
       </Routes>
+      </Suspense>
   )
 }
+
+export default Home;

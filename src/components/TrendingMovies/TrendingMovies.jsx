@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { getTrendingMovies } from 'services/moviesApi';
 import { MoviesList } from 'components/MoviesList/MoviesList';
+import css from './TrendingMovies.module.css'
 
 
-export const TrendingMovies = () => {
+function TrendingMovies() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -14,8 +15,10 @@ export const TrendingMovies = () => {
 
   return (
     <>
-    <h1>Trending Today</h1>
+    <h1 className={css.title}>Trending Today</h1>
       <MoviesList movies={movies} />
       </>
   );
 };
+
+export default TrendingMovies;
