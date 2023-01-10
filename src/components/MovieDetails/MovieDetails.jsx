@@ -31,8 +31,8 @@ export const MovieDetails = () => {
           <Link to="cast" >Cast</Link>
           
           <Routes>
-            <Route path="cast" element={<Cast />} />
-           <Route path="reviews" element={<Reviews />} />
+          <Route path="cast" element={<Cast />} />
+          <Route path="reviews" element={<Reviews />} />
           </Routes>
         </div>
         </>
