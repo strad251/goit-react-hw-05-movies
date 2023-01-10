@@ -55,13 +55,13 @@ function MovieDetails()  {
             <h2>Additional information</h2>
           <Link to="reviews" className={css.info_link}>Reviews</Link><br/>
           <Link to="cast" className={css.info_link}>Cast</Link>
+        </div>
           <Suspense fallback={<Loader/>}>
           <Routes>
           <Route path="cast" element={<Cast />} />
           <Route path="reviews" element={<Reviews />} />
           </Routes>
           </Suspense>
-        </div>
         </div>
     )
 }
