@@ -10,7 +10,7 @@ const instanceMovie = axios.create({
 export const getTrendingMovies = async () => {
   const {
     data
-  } = await instanceMovie.get('/trending/all/day', {
+  } = await instanceMovie.get('/trending/movie/day', {
     params: {
       page: 1,
     },
