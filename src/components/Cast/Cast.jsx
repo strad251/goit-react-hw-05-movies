@@ -27,7 +27,7 @@ function Cast () {
             <li key={id}>
               <div >
                 <img
-                  src={`https://image.tmdb.org/t/p/w500${profile_path}`}
+                  src={profile_path ? `https://image.tmdb.org/t/p/w500${profile_path}` : 'https://www.drupal.org/files/project-images/broken-image.jpg'}
                   alt={original_name}  
                   className={css.cast_img}
                 />

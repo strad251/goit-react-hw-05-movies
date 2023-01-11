@@ -1,18 +1,28 @@
-import { lazy, Suspense } from "react";
-import { Route, Routes } from "react-router-dom"
+import { useEffect, useState } from "react";
 
-import { Loader } from "components/Loader/Loader";
+import { getTrendingMovies } from "services/moviesApi";
 
-const TrendingMovies = lazy(() => import('components/TrendingMovies/TrendingMovies'));
+import { MoviesList } from "components/MoviesList/MoviesList";
+
+import css from './Home.module.css'
+
 
 function Home() {
+   const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    getTrendingMovies().then(({ results }) => {
+      setMovies(results);
+    });
+  }, []);
+
   return (
-      <Suspense fallback={<Loader/>}>
-        <Routes>
-        <Route path="/" element={<TrendingMovies />} />
-      </Routes>
-      </Suspense>
-  )
+    <>
+    <h1 className={css.title}>Trending Today</h1>
+      <MoviesList movies={movies} />
+      </>
+  );
 }
 
 export default Home;
+

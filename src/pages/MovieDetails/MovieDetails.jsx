@@ -28,7 +28,10 @@ function MovieDetails()  {
     return (
       <div className={css.details_wrapper}>
         <div>
-          <img src={'https://image.tmdb.org/t/p/w500' + poster_path} alt={title} className={css.details_img } />
+          <img
+            src={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : 'https://www.drupal.org/files/project-images/broken-image.jpg'}
+            alt={title}
+            className={css.details_img} />
         </div>
         <div className={css.details}>
 

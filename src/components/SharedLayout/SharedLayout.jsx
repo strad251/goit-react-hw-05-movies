@@ -1,10 +1,10 @@
 
-import { NavLink, } from "react-router-dom"
+import { NavLink, Outlet, } from "react-router-dom"
 import classNames from "classnames"
 
 import css from './Layout.module.css'
 
-export const Layout = ({children}) => {
+function Layout () {
   return (
     <div>
       <nav className={css.nav}>
@@ -21,9 +21,11 @@ export const Layout = ({children}) => {
           </li>
         </ul>
       </nav>
-      {children}
+      <Outlet />
     </div>
   )
 }
+
+export default Layout;
 
  
