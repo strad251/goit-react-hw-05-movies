@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { getCastById } from "services/moviesApi";
 
 import css from './Cast.module.css'
+
+
 function Cast () {
 
   const [cast, setCast] = useState([]);

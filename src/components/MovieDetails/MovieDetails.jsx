@@ -25,7 +25,6 @@ function MovieDetails()  {
     release_date,
     genres
     } = movie;
-  // var year = { release_date }.getFullYear();
     return (
       <div className={css.details_wrapper}>
         <div>

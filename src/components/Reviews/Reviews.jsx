@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getReviewsById } from "services/moviesApi";
 
+import { getReviewsById } from "services/moviesApi";
 
 function Reviews() {
 

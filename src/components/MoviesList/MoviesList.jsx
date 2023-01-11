@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+
 import css from './MoviesList.module.css'
+
 export const MoviesList = ({ movies }) => {
-  return (
-  
+  return (  
     <ul>
       {movies.map(({title, name, id }) => (
         <li key={id} className={css.movie_li}>
@@ -11,7 +12,6 @@ export const MoviesList = ({ movies }) => {
           </Link>
         </li>
       ))}
-    </ul>
-    
+    </ul>  
   );
 };

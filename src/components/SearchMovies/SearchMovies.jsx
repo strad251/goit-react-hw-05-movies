@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+
 import { getMovieByQuery } from 'services/moviesApi';
+
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import { SearchForm } from 'components/SearchFrom/SearchForm';
 
