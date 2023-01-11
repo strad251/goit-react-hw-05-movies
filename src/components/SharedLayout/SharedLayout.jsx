@@ -2,9 +2,9 @@
 import { NavLink, Outlet, } from "react-router-dom"
 import classNames from "classnames"
 
-import css from './Layout.module.css'
+import css from './SharedLayout.module.css'
 
-function Layout () {
+function SharedLayout () {
   return (
     <div>
       <nav className={css.nav}>
@@ -26,6 +26,6 @@ function Layout () {
   )
 }
 
-export default Layout;
+export default SharedLayout;
 
  
