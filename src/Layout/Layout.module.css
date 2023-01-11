@@ -24,3 +24,7 @@
 .nav_link:hover {
   font-size: 32px;
 }
+
+.active {
+  color: #222;
+}
